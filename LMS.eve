@@ -1,0 +1,17 @@
+# Secret Key for session management
+SECRET_KEY=your_secret_key_here
+
+# Database URL
+DATABASE_URL=sqlite:///licenses.db
+
+# License Validation URL
+LICENSE_VALIDATION_URL=https://your-license-validation-url.com
+
+# Security Password Salt
+SECURITY_PASSWORD_SALT=your_salt_here
+
+# Logging Level
+LOGGING_LEVEL=INFO
+
+# Enable/Disable Debug Mode
+DEBUG=True

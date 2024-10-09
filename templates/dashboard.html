@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/validation.js') }}" defer></script>
+    <title>License Management Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1>License Management Dashboard</h1>
+        
+        <!-- License Validation Form -->
+        <section>
+            <h2>Validate License</h2>
+            <form id="licenseForm" method="POST" action="/validate_license">
+                <input type="text" id="licenseInput" name="license_key" placeholder="Enter License Key" required>
+                <button type="submit" id="validateButton">Validate License</button>
+            </form>
+        </section>
+
+        <!-- Usage Statistics -->
+        <section>
+            <h2>Usage Statistics</h2>
+            <div id="usageStats">
+                <p>Total Active Licenses: <span id="activeLicenses">0</span></p>
+                <p>Total Revoked Licenses: <span id="revokedLicenses">0</span></p>
+                <p>Recent Activity:</p>
+                <ul id="activityLog">
+                    <li>No recent activity.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Alerts Section -->
+        <section>
+            <h2>Alerts</h2>
+            <div id="alerts">
+                <p id="alertMessage" style="color: red;">No alerts at this time.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 License Management System</p>
+        </footer>
+    </div>
+</body>
+</html>
